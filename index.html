@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gamer's Spot - Tu tienda gamer</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gamer's Spot </h1> 
+        <img src="Imagenes/Gamer.png" width="50" height="50" alt="">
+        <p>Tu tienda gamer favorita</p>
+    </header>
+    <nav>
+        <a href="Pagina web.html">Inicio</a>
+        <a href="Productos.html">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section>
+        <h2>Bienvenido a Gamer's Spot</h2>
+        <p>Descubre una amplia selección de productos gamer, desde hardware hasta accesorios y videojuegos.</p>
+        <p>¡Sumérgete en el mundo gamer con nosotros!</p>
+    </section>
+    <div class="slider-frame">
+        <ul>
+            <li><img src="Imagenes/mouse1.png" alt=""></li>
+            <li><img src="Imagenes/teclado1.png" alt=""></li>
+            <li><img src="Imagenes/xbox1.png" width="500" height="400" alt=""></li>
+	    <li><img src="Imagenes/audifonos.png" alt=""></li>
+            <li><img src="Imagenes/audifonos2.png" alt=""></li>
+
+        </ul>
+    </div> 
+    <left><section id="sobre nosotros">
+        <h2>Sobre nosostros</h2>
+        <p>Esta es una página de shopping dirigida a vender productos para
+        el publico <strong>gamer</strong>. <br>Gamer's Spot nació de la pasión por los videojuegos y la cultura gamer. Desde nuestros inicios, <br>
+        nos propusimos crear un espacio donde los entusiastas del gaming pudieran encontrar los mejores productos y accesorios.</p>
+    </section></left>
+    <section id="+ info">
+        <h2>+ Info</h2>
+        <p>¿Quieres saber más sobre videojuegos?</p>
+        <p>Te recomendamos entrar a la siguiente página para obtener más informacion sobre el mundo <strong>gamer</strong></p>
+        <p><a href="https://www.fandom.com/topics/games"><strong>Ver + info</strong></p></a>
+    </section>
+    <section id="contacto">
+         <h2>Contacto</h2>
+         <p>¡Contáctanos para cualquier pregunta o comentario!</p>
+            
+        <div class="contacto-info">
+
+            <p><img src="Imagenes/tele.png" width="15" height="15"><strong> Teléfono:</strong> +52 55 2187 0698</p>
+            <p><img src="Imagenes/correo.png" width="15" height="15"><strong> Correo:</strong> infogamer@gamersspot.com</p>
+            <p>Únete a la conversación en nuestro discord</p> <br><br>
+            <a href="https://discord.gg/d8BQuQ72"><img src="Imagenes/discord.png" width="65" height="50"></a>
+        </div>
+        <div class="contacto-info">
+            <br><br>
+            <h2>Redes sociales: </h2>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="Imagenes/contacto1.png" width="50" height="50"></a> 
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="Imagenes/contacto2.png" width="50" height="50"></a> 
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="Imagenes/contacto3.png" width="50" height="50"></a> <br><br><br>
+            <img src="Imagenes/Gamer.png" width="150" height="120">
+        </div><br>
+        <br>
+    </section>
+
+        
+        <section id="opiniones">
+            <h2>Opiniones</h2><br>
+            <p>¡Cuéntanos tu experiencia en Gamer's Spot!</p> <br>
+            <div id="opiniones-container"></div>
+            <form id="opiniones-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+                <br>
+                <label for="opinion">Opinión:</label>
+                <textarea id="opinion" name="opinion" rows="4" cols="50" required></textarea><br>
+                <br>
+                <input type="submit" value="Enviar opinión">
+            </form>
+        </section>
+    </section><br><br><br>
+    <footer>
+        <p>&copy; 2023 Gamer's Spot. Todos los derechos reservados.</p>
+        <p>Esta es una página de prueba, nada de lo que se anuncia aquí está en venta</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const opinionesContainer = document.getElementById("opiniones-container");
+            const opinionesForm = document.getElementById("opiniones-form");
+
+            opinionesForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const nombre = document.getElementById("nombre").value;
+                const opinion = document.getElementById("opinion").value;
+                const nuevaOpinion = document.createElement("div");
+                nuevaOpinion.innerHTML = `<strong>"${nombre}"</strong> dice: ${opinion}<br><br>`;
+                alert("Opinion enviada");
+                opinionesContainer.appendChild(nuevaOpinion);
+                opinionesForm.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>  

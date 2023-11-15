@@ -1,0 +1,49 @@
+
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #1242e13b;
+            padding: 0.5em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        div {
+            align-items: center;
+            text-align: center;
+        }
+        button {
+            background-color: aqua;
+            text-emphasis-color: green;
+        }
+        
